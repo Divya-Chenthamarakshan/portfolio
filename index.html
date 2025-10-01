@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divya Chenthamarakshan - Technical Sales Engineer & Analytics Professional</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f0f4f8;
+        }
+
+        /* Navigation */
+        nav {
+            background: #fff;
+            padding: 1rem 5%;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: #1e40af;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            color: white;
+            padding: 5rem 5%;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .subtitle {
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            color: #dbeafe;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            color: #e0e7ff;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .cta-buttons a {
+            padding: 0.75rem 2rem;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: white;
+            color: #1e40af;
+        }
+
+        .btn-primary:hover {
+            background: #f3f4f6;
+        }
+
+        .btn-secondary {
+            border: 2px solid white;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: white;
+            color: #1e40af;
+        }
+
+        /* Stats Section */
+        .stats {
+            background: #fff;
+            padding: 3rem 5%;
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            flex-wrap: wrap;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 2.5rem;
+            color: #1e40af;
+            margin-bottom: 0.5rem;
+        }
+
+        .stat-item p {
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        /* Experience Section */
+        .experience {
+            padding: 4rem 5%;
+            background: #f8fafc;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            color: #1e3a8a;
+            margin-bottom: 1rem;
+        }
+
+        .section-header p {
+            color: #64748b;
+            font-size: 1.1rem;
+        }
+
+        .timeline {
+            max-width: 1000px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background: #e2e8f0;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding: 2rem 0;
+        }
+
+        .timeline-content {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            width: calc(50% - 40px);
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+
+        .timeline-content h3 {
+            color: #1e3a8a;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-content .company {
+            color: #64748b;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .timeline-content ul {
+            list-style: none;
+            color: #475569;
+        }
+
+        .timeline-content li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-content li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #3b82f6;
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 4rem 5%;
+            background: #fff;
+        }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .project-card {
+            background: #f8fafc;
+            border-radius: 10px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-color: #3b82f6;
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, #1e40af, #3b82f6);
+            color: white;
+            padding: 1.5rem;
+        }
+
+        .project-header h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-header .date {
+            font-size: 0.9rem;
+            color: #dbeafe;
+        }
+
+        .project-body {
+            padding: 1.5rem;
+        }
+
+        .project-body p {
+            color: #475569;
+            margin-bottom: 1rem;
+            line-height: 1.6;
+        }
+
+        .metrics {
+            display: flex;
+            gap: 1.5rem;
+            margin: 1rem 0;
+            flex-wrap: wrap;
+        }
+
+        .metric {
+            background: #eff6ff;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            color: #1e40af;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .tech-stack {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            margin-top: 1rem;
+        }
+
+        .tech-tag {
+            background: #e0e7ff;
+            color: #4338ca;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+        }
+
+        /* Skills Section */
+        .skills {
+            padding: 4rem 5%;
+            background: #f8fafc;
+        }
+
+        .skills-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+        }
+
+        .skill-category h3 {
+            color: #1e3a8a;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .skill-items {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-item {
+            background: #eff6ff;
+            color: #1e40af;
+            padding: 0.4rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Contact Section */
+        .contact {
+            background: #1e3a8a;
+            color: white;
+            padding: 4rem 5%;
+            text-align: center;
+        }
+
+        .contact h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .contact-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .contact-links a {
+            color: white;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border: 2px solid white;
+            border-radius: 5px;
+            transition: all 0.3s;
+        }
+
+        .contact-links a:hover {
+            background: white;
+            color: #1e3a8a;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .timeline::before {
+                left: 20px;
+            }
+            
+            .timeline-content {
+                width: calc(100% - 40px);
+                margin-left: 40px !important;
+            }
+            
+            .stats {
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Divya Chenthamarakshan</h1>
+            <p class="subtitle">Technical Sales Engineer | Solutions Engineer | Business Development</p>
+            <p>Tech Business Development professional with a unique blend of B2B SaaS sales expertise and advanced analytics capabilities. Proven success in solutions engineering, conducting technical product demos that drove revenue growth. Currently pursuing Master's in Analytics at Northeastern University (GPA: 4.0)</p>
+            <div class="cta-buttons">
+                <a href="mailto:divyac2030@gmail.com" class="btn-primary">Get In Touch</a>
+                <a href="https://linkedin.com/in/divya-chenthamarakshan-4ab600330/" target="_blank" class="btn-secondary">LinkedIn Profile</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="stat-item">
+            <h3>3+</h3>
+            <p>Years B2B SaaS Sales</p>
+        </div>
+        <div class="stat-item">
+            <h3>15%</h3>
+            <p>Revenue Growth Achieved</p>
+        </div>
+        <div class="stat-item">
+            <h3>89%</h3>
+            <p>ML Model Accuracy</p>
+        </div>
+        <div class="stat-item">
+            <h3>4.0</h3>
+            <p>Graduate GPA</p>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="experience">
+        <div class="section-header">
+            <h2>Professional Experience</h2>
+            <p>Combining technical expertise with business acumen to drive growth</p>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Business Development Associate</h3>
+                    <p class="company">Wyzmindz Solution (Autosherpa) | Apr 2021 - July 2023</p>
+                    <ul>
+                        <li>Led end-to-end B2B SaaS sales for automotive dealerships through 15+ monthly demos</li>
+                        <li>Executed 40+ daily cold calls with 30% email open rate</li>
+                        <li>Conducted competitive market analysis across 3+ regions</li>
+                        <li>Delivered 20+ client onboarding sessions, increasing upsell by 10%</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-content">
+                    <h3>Business Development Consultant</h3>
+                    <p class="company">Rijems Solutions | Sep 2019 - Mar 2020</p>
+                    <ul>
+                        <li>Managed 20 consultants and advised 50+ clients</li>
+                        <li>Generated leads increasing engagement by 35%</li>
+                        <li>Optimized processes to reduce resolution time by 20%</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="section-header">
+            <h2>Featured Projects</h2>
+            <p>Data-driven solutions with measurable business impact</p>
+        </div>
+        <div class="project-grid">
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>ReMo App Data Analytics Consulting</h3>
+                    <p class="date">April 2025 - June 2025</p>
+                </div>
+                <div class="project-body">
+                    <p>Built ML models analyzing 20,000+ book records for Maine youth literacy programs, identifying genre trends that improved student participation</p>
+                    <div class="metrics">
+                        <span class="metric">89% Accuracy</span>
+                        <span class="metric">17x Engagement</span>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Machine Learning</span>
+                        <span class="tech-tag">Tableau</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>SaaS Market Research & Sales Analysis</h3>
+                    <p class="date">Oct 2024</p>
+                </div>
+                <div class="project-body">
+                    <p>Analyzed 10K+ transactions using R to identify seasonal trends and profitability drivers across regions</p>
+                    <div class="metrics">
+                        <span class="metric">25% Q4 Revenue Spike</span>
+                        <span class="metric">10K+ Transactions</span>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">R</span>
+                        <span class="tech-tag">ANOVA</span>
+                        <span class="tech-tag">Regression Analysis</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-header">
+                    <h3>Customer Behavior Analytics</h3>
+                    <p class="date">March 2025</p>
+                </div>
+                <div class="project-body">
+                    <p>Analyzed customer data to identify purchase patterns and segment customers for targeted marketing strategies</p>
+                    <div class="metrics">
+                        <span class="metric">Customer Segmentation</span>
+                        <span class="metric">Retention Strategy</span>
+                    </div>
+                    <div class="tech-stack">
+                        <span class="tech-tag">R</span>
+                        <span class="tech-tag">Statistical Modeling</span>
+                        <span class="tech-tag">Data Visualization</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="section-header">
+            <h2>Skills & Expertise</h2>
+            <p>Technical proficiency meets business strategy</p>
+        </div>
+        <div class="skills-container">
+            <div class="skill-category">
+                <h3>📊 Analytics & Programming</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Python</span>
+                    <span class="skill-item">SQL</span>
+                    <span class="skill-item">R</span>
+                    <span class="skill-item">Statistical Modeling</span>
+                    <span class="skill-item">Machine Learning</span>
+                    <span class="skill-item">Time Series Analysis</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>💼 Business Development</h3>
+                <div class="skill-items">
+                    <span class="skill-item">B2B SaaS Sales</span>
+                    <span class="skill-item">Solutions Engineering</span>
+                    <span class="skill-item">Product Demos</span>
+                    <span class="skill-item">CRM Management</span>
+                    <span class="skill-item">Consultative Selling</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>🛠️ Tools & Platforms</h3>
+                <div class="skill-items">
+                    <span class="skill-item">Tableau</span>
+                    <span class="skill-item">Power BI</span>
+                    <span class="skill-item">HubSpot</span>
+                    <span class="skill-item">Salesforce</span>
+                    <span class="skill-item">Google Workspace</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>📜 Certifications</h3>
+                <div class="skill-items">
+                    <span class="skill-item">AI in Professional Practice</span>
+                    <span class="skill-item">Business Analytics</span>
+                    <span class="skill-item">Data Visualization</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Let's Connect!</h2>
+        <p>I'm interested in opportunities that leverage both business strategy and technical implementation</p>
+        <div class="contact-links">
+            <a href="mailto:divyac2030@gmail.com">
+                <span>✉️</span> Email Me
+            </a>
+            <a href="https://linkedin.com/in/divya-chenthamarakshan-4ab600330/" target="_blank">
+                <span>💼</span> LinkedIn
+            </a>
+            <a href="https://github.com/Divya-Chenthamarakshan" target="_blank">
+                <span>📁</span> GitHub
+            </a>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Active nav highlighting
+        window.addEventListener('scroll', () => {
+            let current = '';
+            const sections = document.querySelectorAll('section');
+            
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (scrollY >= sectionTop - 60) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            document.querySelectorAll('nav a').forEach(link => {
+                link.style.color = '#333';
+                if (link.getAttribute('href').substring(1) === current) {
+                    link.style.color = '#1e40af';
+                }
+            });
+        });
+
+        // Animate elements on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.project-card, .timeline-content, .skill-category').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'all 0.6s ease-out';
+            observer.observe(el);
+        });
+    </script>
+</body>
+</html>
