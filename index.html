@@ -359,6 +359,59 @@
             font-size: 0.9rem;
         }
 
+/* Certifications Section */
+.certifications {
+    padding: 4rem 5%;
+    background: #fff;
+}
+
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.cert-card {
+    background: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    transition: all 0.3s;
+    border: 2px solid transparent;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    border-color: #3b82f6;
+}
+
+.cert-card img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    background: white;
+    padding: 10px;
+}
+
+.cert-card h3 {
+    color: #1e3a8a;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+.cert-card p {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+        
         /* Contact Section */
         .contact {
             background: #1e3a8a;
@@ -426,6 +479,7 @@
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
+            <li><a href="#certifications">Certifications</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -622,6 +676,57 @@
             </div>
         </div>
     </section>
+
+<!-- Certifications Section -->
+<section id="certifications" class="certifications">
+    <div class="section-header">
+        <h2>Certifications</h2>
+        <p>Professional certifications and completed courses</p>
+    </div>
+    <div class="certifications-grid">
+        <a href="https://badgr.com/public/assertions/mpnaWqDFQJGV01wyrXRmVg?identity__email=chenthamarakshan.d@northeastern.edu" target="_blank" class="cert-card">
+            <img src="cert1.png" alt="AI in Professional Practice">
+            <h3>AI in Professional Practice</h3>
+            <p>Northeastern University</p>
+        </a>
+        
+        <a href="https://www.linkedin.com/learning/certificates/dd5d946f3170dd7e1413634c41cefae8256def87042f474b76072bf39556dbe2" target="_blank" class="cert-card">
+            <img src="cert2.png" alt="Business Analytics: Sales Data">
+            <h3>Business Analytics: Sales Data</h3>
+            <p>LinkedIn Learning</p>
+        </a>
+        
+        <a href="https://www.linkedin.com/learning/certificates/3aff64a583d4a5f9e1f757f944385d3bc186a0f51f6c36900b0feed0d55dc6e3" target="_blank" class="cert-card">
+            <img src="cert3.png" alt="Business Analysis Foundations">
+            <h3>Business Analysis Foundations</h3>
+            <p>LinkedIn Learning</p>
+        </a>
+        
+        <a href="https://www.linkedin.com/learning/certificates/3cb6c913b043e892429ff63f28b8206a4f3ce50bf231cb2461ad6307b0b6505b" target="_blank" class="cert-card">
+            <img src="cert4.png" alt="Learning Salesforce CPQ">
+            <h3>Learning Salesforce CPQ</h3>
+            <p>LinkedIn Learning</p>
+        </a>
+        
+        <a href="https://badgr.com/public/assertions/u-3tj3TMT02ABRpdJAOprw?identity__email=chenthamarakshan.d@northeastern.edu" target="_blank" class="cert-card">
+            <img src="cert5.png" alt="Data Visualization and Storytelling">
+            <h3>Data Visualization and Storytelling</h3>
+            <p>Northeastern University</p>
+        </a>
+        
+        <a href="https://badgr.com/public/assertions/2cXxw589RvaUlgnYIPZ4yw" target="_blank" class="cert-card">
+            <img src="cert6.png" alt="Introduction to Analytics">
+            <h3>Introduction to Analytics</h3>
+            <p>Northeastern University</p>
+        </a>
+        
+        <a href="https://www.linkedin.com/learning/certificates/7e1185c174b3d079be479efb4852ed25e26a092c4094ae5c001da52907e54ea7" target="_blank" class="cert-card">
+            <img src="cert7.png" alt="Product Marketing Foundations">
+            <h3>Product Marketing Foundations</h3>
+            <p>LinkedIn Learning</p>
+        </a>
+    </div>
+</section>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
