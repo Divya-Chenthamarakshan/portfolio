@@ -146,6 +146,71 @@
             font-weight: 500;
         }
 
+        /* Education Section */
+.education {
+    padding: 4rem 5%;
+    background: #fff;
+}
+
+.education-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    gap: 3rem;
+}
+
+.education-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.university-logo {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    flex-shrink: 0;
+}
+
+.education-content h3 {
+    color: #1e3a8a;
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.university-name {
+    color: #475569;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.duration {
+    color: #64748b;
+    font-size: 0.9rem;
+}
+
+.gpa {
+    color: #1e40af;
+    font-weight: 600;
+    margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .education-item {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .university-logo {
+        width: 100px;
+        height: 100px;
+    }
+}
+
         /* Experience Section */
         .experience {
             padding: 4rem 5%;
@@ -476,6 +541,7 @@
     <nav>
         <ul>
             <li><a href="#home">Home</a></li>
+            <li><a href="#education">Education</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -507,6 +573,33 @@
     <div class="stat-item">
         <h3>4.0</h3>
         <p>Graduate GPA</p>
+    </div>
+</section>
+   
+    <!-- Education Section -->
+<section id="education" class="education">
+    <div class="section-header">
+        <h2>Education</h2>
+        <p>Academic foundation in Computer Science and Analytics</p>
+    </div>
+    <div class="education-container">
+        <div class="education-item">
+            <img src="northeastern-logo.png" alt="Northeastern University" class="university-logo">
+            <div class="education-content">
+                <h3>Master's in Analytics</h3>
+                <p class="university-name">Northeastern University, San Jose, CA</p>
+                <p class="duration">Sept 2024 – Mar 2026 (Expected)</p>
+                <p class="gpa">GPA: 4.0/4.0</p>
+            </div>
+        </div>
+        <div class="education-item">
+            <img src="calicut-logo.png" alt="University of Calicut" class="university-logo">
+            <div class="education-content">
+                <h3>BTech in Computer Science & Engineering</h3>
+                <p class="university-name">University of Calicut, Kerala, India</p>
+                <p class="duration">Aug 2014 – May 2018</p>
+            </div>
+        </div>
     </div>
 </section>
 
