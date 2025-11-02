@@ -883,32 +883,88 @@
         </a>
     </div>
 </section>
-    
-    <!-- Why Hire Me Section -->
-<section id="whyhire" class="whyhire">
-    <div class="section-header">
-        <h2>Why Hire Me</h2>
-    </div>
-    <div class="whyhire-container">
-        <div class="whyhire-card">
-            <h3>Proven B2B SaaS Experience</h3>
-            <p>Over 3 years of hands-on experience in B2B SaaS sales and customer success, managing the full sales cycle — from technical demos and solution design to onboarding and retention. Delivered 15+ monthly client demos and led 20+ onboarding sessions, directly driving adoption and customer satisfaction.</p>
-        </div>
-        <div class="whyhire-card">
-            <h3>Technical & Analytical Expertise</h3>
-            <p>Blend of sales and analytics skills with proficiency in Python, SQL, Tableau, Power BI, and CRM tools like Salesforce and HubSpot. Strong foundation in predictive modeling, churn analysis, and data-driven sales insights to enhance go-to-market strategies and decision-making.</p>
-        </div>
-        <div class="whyhire-card">
-            <h3>Customer-Centric Problem Solving</h3>
-            <p>Known for translating complex business needs into scalable technical solutions. Collaborated with cross-functional teams to optimize workflows, gather customer feedback, and shape product features—resulting in higher efficiency and retention rates.</p>
-        </div>
-        <div class="whyhire-card">
-            <h3>Continuous Learning & Innovation</h3>
-            <p>Pursuing a Master's in Analytics (4.0 GPA) at Northeastern University. Passionate about leveraging data, AI, and modern sales technologies to create value, improve processes, and deliver measurable business impact.</p>
-        </div>
-    </div>
-</section>
+    /* Why Hire Me Section */
+.whyhire {
+    padding: 4rem 5%;
+    background: #1a1f36;
+    color: white;
+}
 
+.whyhire .section-header {
+    text-align: center; /* Center the heading */
+    margin-bottom: 3rem;
+}
+
+.whyhire .section-header h2 {
+    color: #3dd5f3;
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #3dd5f3, #5e72e4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.whyhire-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+}
+
+.whyhire-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(93, 114, 228, 0.3);
+    border-radius: 16px;
+    padding: 2.5rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+.whyhire-card:nth-child(1) {
+    border-color: rgba(61, 213, 243, 0.3);
+}
+
+.whyhire-card:nth-child(2) {
+    border-color: rgba(138, 94, 255, 0.3);
+}
+
+.whyhire-card:nth-child(3) {
+    border-color: rgba(255, 100, 150, 0.3);
+}
+
+.whyhire-card:nth-child(4) {
+    border-color: rgba(94, 228, 165, 0.3);
+}
+
+.whyhire-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(61, 213, 243, 0.1);
+}
+
+.whyhire-card h3 {
+    color: #fff;
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.whyhire-card p {
+    color: #a8b2d1;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .whyhire-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .whyhire .section-header h2 {
+        font-size: 2.5rem;
+    }
+}
     <!-- Contact Section -->
     <section id="contact" class="contact">
         <h2>Let's Connect!</h2>
