@@ -476,6 +476,64 @@
     color: #64748b;
     font-size: 0.9rem;
 }
+
+
+/* Why Hire Me Section */
+.whyhire {
+    padding: 4rem 5%;
+    background: #1a1f36;
+    color: white;
+}
+
+.whyhire .section-header h2 {
+    color: #3dd5f3;
+    text-align: left;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.whyhire-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+}
+
+.whyhire-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s;
+}
+
+.whyhire-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: #3dd5f3;
+    transform: translateY(-5px);
+}
+
+.whyhire-card h3 {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.whyhire-card p {
+    color: #b8bcc8;
+    line-height: 1.8;
+    font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+    .whyhire-container {
+        grid-template-columns: 1fr;
+    }
+}
+        
         
         /* Contact Section */
         .contact {
@@ -546,6 +604,7 @@
             <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#certifications">Certifications</a></li>
+            <li><a href="#whyhire">Why Hire Me</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </nav>
@@ -822,6 +881,31 @@
             <h3>Product Marketing Foundations</h3>
             <p>LinkedIn Learning</p>
         </a>
+    </div>
+</section>
+    
+    <!-- Why Hire Me Section -->
+<section id="whyhire" class="whyhire">
+    <div class="section-header">
+        <h2>Why Hire Me</h2>
+    </div>
+    <div class="whyhire-container">
+        <div class="whyhire-card">
+            <h3>Proven B2B SaaS Experience</h3>
+            <p>Over 3 years of hands-on experience in B2B SaaS sales and customer success, managing the full sales cycle — from technical demos and solution design to onboarding and retention. Delivered 15+ monthly client demos and led 20+ onboarding sessions, directly driving adoption and customer satisfaction.</p>
+        </div>
+        <div class="whyhire-card">
+            <h3>Technical & Analytical Expertise</h3>
+            <p>Blend of sales and analytics skills with proficiency in Python, SQL, Tableau, Power BI, and CRM tools like Salesforce and HubSpot. Strong foundation in predictive modeling, churn analysis, and data-driven sales insights to enhance go-to-market strategies and decision-making.</p>
+        </div>
+        <div class="whyhire-card">
+            <h3>Customer-Centric Problem Solving</h3>
+            <p>Known for translating complex business needs into scalable technical solutions. Collaborated with cross-functional teams to optimize workflows, gather customer feedback, and shape product features—resulting in higher efficiency and retention rates.</p>
+        </div>
+        <div class="whyhire-card">
+            <h3>Continuous Learning & Innovation</h3>
+            <p>Pursuing a Master's in Analytics (4.0 GPA) at Northeastern University. Passionate about leveraging data, AI, and modern sales technologies to create value, improve processes, and deliver measurable business impact.</p>
+        </div>
     </div>
 </section>
 
