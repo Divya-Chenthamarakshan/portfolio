@@ -156,42 +156,44 @@
         /* Education Section */
 .education {
     padding: 4rem 5%;
-    background: #f8fafc;
+    background: #fff;
 }
 
 .education-container {
     max-width: 1000px;
     margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    gap: 4rem;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 3rem;
 }
 
 .education-item {
-    flex: 1;
-    min-width: 300px;
-    text-align: center;
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    gap: 2rem;
 }
 
 .university-logo {
     width: 120px;
     height: 120px;
     object-fit: contain;
-    margin-bottom: 1.5rem;
+    flex-shrink: 0;
 }
 
 .education-content h3 {
-    color: #1e40af;
+    color: #1e3a8a;
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
-    font-weight: 600;
 }
 
 .university-name {
     color: #64748b;
-    font-size: 1rem;
-    margin-bottom: 0.3rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
 
 .duration {
@@ -203,13 +205,12 @@
     color: #1e40af;
     font-weight: 600;
     margin-top: 0.5rem;
-    font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {
-    .education-container {
+    .education-item {
         flex-direction: column;
-        align-items: center;
+        text-align: center;
     }
 }
         /* Experience Section */
@@ -652,7 +653,7 @@
             <img src="northeastern-logo.png" alt="Northeastern University" class="university-logo">
             <div class="education-content">
                 <h3>Master's in Analytics</h3>
-                <p class="university-name">Northeastern University, USA</p>
+                <p class="university-name">Northeastern University, San Jose, CA</p>
                 <p class="duration">Sept 2024 – Mar 2026 (Expected)</p>
                 <p class="gpa">GPA: 4.0/4.0</p>
             </div>
@@ -661,13 +662,12 @@
             <img src="calicut-logo.png" alt="University of Calicut" class="university-logo">
             <div class="education-content">
                 <h3>BTech in Computer Science & Engineering</h3>
-                <p class="university-name">University of Calicut, India</p>
+                <p class="university-name">University of Calicut, Kerala, India</p>
                 <p class="duration">Aug 2014 – May 2018</p>
             </div>
         </div>
     </div>
 </section>
-
     <!-- Experience Section -->
     <section id="experience" class="experience">
         <div class="section-header">
