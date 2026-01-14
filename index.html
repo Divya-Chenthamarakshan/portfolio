@@ -155,48 +155,47 @@
 
         /* Education Section */
 .education {
-    padding: 1rem 5% 4rem 5%;
-    background: #fff;
+    padding: 4rem 5%;
+    background: #f8fafc;
 }
 
 .education-container {
     max-width: 1000px;
     margin: 0 auto;
-    display: grid;
-    gap: 3rem;
+    display: flex;
+    justify-content: space-between;
+    gap: 4rem;
+    flex-wrap: wrap;
 }
 
 .education-item {
-    display: flex;
-    align-items: center;
-    gap: 2rem;
-    background: #f8fafc;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
 }
 
 .university-logo {
     width: 120px;
     height: 120px;
     object-fit: contain;
-    flex-shrink: 0;
+    margin-bottom: 1.5rem;
 }
 
 .education-content h3 {
-    color: #1e3a8a;
-    font-size: 1.3rem;
+    color: #1e40af;
+    font-size: 1.2rem;
     margin-bottom: 0.5rem;
+    font-weight: 600;
 }
 
 .university-name {
-    color: #475569;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
+    color: #64748b;
+    font-size: 1rem;
+    margin-bottom: 0.3rem;
 }
 
 .duration {
-    color: #64748b;
+    color: #94a3b8;
     font-size: 0.9rem;
 }
 
@@ -204,20 +203,15 @@
     color: #1e40af;
     font-weight: 600;
     margin-top: 0.5rem;
+    font-size: 0.95rem;
 }
 
 @media (max-width: 768px) {
-    .education-item {
+    .education-container {
         flex-direction: column;
-        text-align: center;
-    }
-    
-    .university-logo {
-        width: 100px;
-        height: 100px;
+        align-items: center;
     }
 }
-
         /* Experience Section */
         .experience {
             padding: 4rem 5%;
@@ -658,7 +652,9 @@
             <img src="northeastern-logo.png" alt="Northeastern University" class="university-logo">
             <div class="education-content">
                 <h3>Master's in Analytics</h3>
-                <p class="university-name">Northeastern University, USA </p>
+                <p class="university-name">Northeastern University, USA</p>
+                <p class="duration">Sept 2024 – Mar 2026 (Expected)</p>
+                <p class="gpa">GPA: 4.0/4.0</p>
             </div>
         </div>
         <div class="education-item">
@@ -666,6 +662,7 @@
             <div class="education-content">
                 <h3>BTech in Computer Science & Engineering</h3>
                 <p class="university-name">University of Calicut, India</p>
+                <p class="duration">Aug 2014 – May 2018</p>
             </div>
         </div>
     </div>
