@@ -544,68 +544,129 @@
 /* Why Hire Me Section */
 .whyhire {
     padding: 4rem 5%;
-    background: #1a1f36;
-    color: white;
+    background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
 }
 
-.whyhire .section-header {
+.circle-container {
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
+    min-height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.whyhire .section-header h2 {
-    color: #3b82f6;
-    font-size: 3rem;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #3b82f6, #1e40af);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+.main-circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
+    animation: moveUpCircle 1.2s ease-out forwards;
 }
 
-.whyhire-container {
+.main-circle h2 {
+    color: white;
+    font-size: 1.8rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+@keyframes moveUpCircle {
+    from {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.circles-grid {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
 }
 
-.whyhire-card {
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(59, 130, 246, 0.3);
-    border-radius: 16px;
-    padding: 2.5rem;
-    backdrop-filter: blur(10px);
+.circle-card {
+    background: white;
+    border-radius: 20px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    border: 2px solid #e5e7eb;
     transition: all 0.3s;
+    position: relative;
 }
 
-.whyhire-card:hover {
-    background: rgba(255, 255, 255, 0.06);
-    transform: translateY(-5px);
-    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.1);
+.circle-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.15);
     border-color: #3b82f6;
 }
 
-.whyhire-card h3 {
-    color: #fff;
-    font-size: 1.4rem;
-    margin-bottom: 1.2rem;
+.circle-number {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #3b82f6, #2563eb);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 0 auto 1.5rem auto;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+.circle-card h3 {
+    color: #1e3a8a;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
     font-weight: 600;
 }
 
-.whyhire-card p {
-    color: #a8b2d1;
-    line-height: 1.8;
-    font-size: 1rem;
+.circle-card p {
+    color: #475569;
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Fade-in animation for circle cards */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animate-circle {
+    animation: fadeInUp 0.8s ease-out forwards;
 }
 
 @media (max-width: 768px) {
-    .whyhire-container {
+    .circles-grid {
         grid-template-columns: 1fr;
     }
     
-    .whyhire .section-header h2 {
-        font-size: 2.5rem;
+    .main-circle {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .main-circle h2 {
+        font-size: 1.4rem;
     }
 }
         
@@ -941,25 +1002,29 @@
     
   <!-- Why Hire Me Section -->
 <section id="whyhire" class="whyhire">
-    <div class="section-header">
-        <h2>Why Hire Me</h2>
+    <div class="circle-container">
+        <div class="main-circle">
+            <h2>Why Hire Me?</h2>
+        </div>
     </div>
-    <div class="whyhire-container">
-        <div class="whyhire-card">
-            <h3>Proven B2B SaaS Experience</h3>
-            <p>Over 3 years of hands-on experience in B2B SaaS sales and customer success, managing the full sales cycle — from technical demos and solution design to onboarding and retention. Delivered 15+ monthly client demos and led 20+ onboarding sessions, directly driving adoption and customer satisfaction.</p>
+
+    <div class="circles-grid">
+        <div class="circle-card animate-circle" style="animation-delay: 0s;">
+            <div class="circle-number">1</div>
+            <h3>Strategic Revenue & Operations Focus</h3>
+            <p>Over three years of hands-on B2B SaaS pipeline management, technical sales support, and CRM clean-up. I know exactly how to manage data in HubSpot and Salesforce to track prospective leads, eliminate conversion bottlenecks, and protect bottom-line accuracy.</p>
         </div>
-        <div class="whyhire-card">
-            <h3>Technical & Analytical Expertise</h3>
-            <p>Blend of sales and analytics skills with proficiency in Python, SQL, Tableau, Power BI, and CRM tools like Salesforce and HubSpot. Strong foundation in predictive modeling, churn analysis, and data-driven sales insights to enhance go-to-market strategies and decision-making.</p>
+
+        <div class="circle-card animate-circle" style="animation-delay: 0.2s;">
+            <div class="circle-number">2</div>
+            <h3>Advanced Data Analytics Credentials</h3>
+            <p>Equipped with a Master of Science in Analytics from Northeastern University and a BTech in Computer Science. I specialize in building interactive Tableau and Power BI dashboards, extracting key transactional data using SQL, and translating complex metrics into actionable insights for leadership.</p>
         </div>
-        <div class="whyhire-card">
-            <h3>Customer-Centric Problem Solving</h3>
-            <p>Known for translating complex business needs into scalable technical solutions. Collaborated with cross-functional teams to optimize workflows, gather customer feedback, and shape product features—resulting in higher efficiency and retention rates.</p>
-        </div>
-        <div class="whyhire-card">
-            <h3>Continuous Learning & Innovation</h3>
-            <p>Pursuing a Master's in Analytics (4.0 GPA) at Northeastern University. Passionate about leveraging data, AI, and modern sales technologies to create value, improve processes, and deliver measurable business impact.</p>
+
+        <div class="circle-card animate-circle" style="animation-delay: 0.4s;">
+            <div class="circle-number">3</div>
+            <h3>Seamless Cross-Functional Communication</h3>
+            <p>Experienced acting as a core technical bridge between GTM revenue teams and back-end engineers. Whether running technical product discovery sessions, leading product demos, or managing stakeholder alignment, I transform complex tool architectures into clear business value.</p>
         </div>
     </div>
 </section>
