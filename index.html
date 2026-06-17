@@ -542,37 +542,55 @@
 }
     
 /* Why Hire Me Section */
+
 .whyhire {
     padding: 4rem 5%;
-    background: linear-gradient(135deg, #f0f9ff 0%, #f8fafc 100%);
+    background: linear-gradient(-45deg, #0369a1, #0284c7, #0ea5e9, #3b82f6, #6366f1, #8b5cf6, #a855f7, #d946ef);
+    background-size: 400% 400%;
+    animation: gradient 18s ease infinite;
+    min-height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
 }
 
 .circle-container {
     text-align: center;
     margin-bottom: 4rem;
-    min-height: 200px;
+    min-height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .main-circle {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    background: linear-gradient(135deg, #3b82f6, #2563eb);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 10px 40px rgba(59, 130, 246, 0.3);
+    padding: 2rem 4rem;
+    border-radius: 30px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 40px rgba(255, 255, 255, 0.1);
     animation: moveUpCircle 1.2s ease-out forwards;
 }
 
 .main-circle h2 {
     color: white;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     text-align: center;
-    padding: 1rem;
+    margin: 0;
+    font-weight: 700;
 }
 
 @keyframes moveUpCircle {
@@ -661,12 +679,11 @@
     }
     
     .main-circle {
-        width: 150px;
-        height: 150px;
+        padding: 1.5rem 3rem;
     }
     
     .main-circle h2 {
-        font-size: 1.4rem;
+        font-size: 1.8rem;
     }
 }
         
