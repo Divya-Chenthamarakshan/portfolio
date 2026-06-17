@@ -311,90 +311,106 @@
         }
 
         /* Projects Section */
-        .projects {
-            padding: 4rem 5%;
-            background: #fff;
-        }
+    
+.projects {
+    padding: 4rem 5%;
+    background: #fff;
+}
 
-        .project-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+.project-list {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
 
-        .project-card {
-            background: #f8fafc;
-            border-radius: 10px;
-            overflow: hidden;
-            transition: all 0.3s;
-            border: 2px solid transparent;
-        }
+.project-item {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 3rem;
+    align-items: center;
+    background: #f8fafc;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+}
 
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-color: #3b82f6;
-        }
+.project-item:nth-child(even) {
+    grid-template-columns: 1fr 400px;
+}
 
-        .project-header {
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            color: white;
-            padding: 1.5rem;
-        }
+.project-item:nth-child(even) .project-image {
+    order: 2;
+}
 
-        .project-header h3 {
-            font-size: 1.3rem;
-            margin-bottom: 0.5rem;
-        }
+.project-image {
+    overflow: hidden;
+    border-radius: 10px;
+    height: 300px;
+}
 
-        .project-header .date {
-            font-size: 0.9rem;
-            color: #dbeafe;
-        }
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 
-        .project-body {
-            padding: 1.5rem;
-        }
+.project-details h3 {
+    color: #1e3a8a;
+    font-size: 1.4rem;
+    margin-bottom: 1.5rem;
+}
 
-        .project-body p {
-            color: #475569;
-            margin-bottom: 1rem;
-            line-height: 1.6;
-        }
+.project-details ul {
+    list-style: none;
+    color: #475569;
+}
 
-        .metrics {
-            display: flex;
-            gap: 1.5rem;
-            margin: 1rem 0;
-            flex-wrap: wrap;
-        }
+.project-details li {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    padding-left: 0;
+}
 
-        .metric {
-            background: #eff6ff;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-            color: #1e40af;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
+.project-details strong {
+    color: #1e40af;
+}
 
-        .tech-stack {
-            display: flex;
-            gap: 0.5rem;
-            flex-wrap: wrap;
-            margin-top: 1rem;
-        }
+/* Left to Right Animation */
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
 
-        .tech-tag {
-            background: #e0e7ff;
-            color: #4338ca;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-        }
+.animate-left {
+    animation: slideInLeft 0.8s ease-out forwards;
+}
 
+@media (max-width: 968px) {
+    .project-item {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .project-item:nth-child(even) {
+        grid-template-columns: 1fr;
+    }
+    
+    .project-item:nth-child(even) .project-image {
+        order: 1;
+    }
+    
+    .project-image {
+        height: 250px;
+    }
+}
         /* Skills Section */
         .skills {
             padding: 4rem 5%;
@@ -726,70 +742,56 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="section-header">
-            <h2>Featured Projects</h2>
-            <p>Data-driven solutions with measurable business impact</p>
-        </div>
-        <div class="project-grid">
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>ReMo App Data Analytics Consulting</h3>
-                    <p class="date">April 2025 - June 2025</p>
-                </div>
-                <div class="project-body">
-                    <p>Built ML models analyzing 20,000+ book records for Maine youth literacy programs, identifying genre trends that improved student participation</p>
-                    <div class="metrics">
-                        <span class="metric">89% Accuracy</span>
-                        <span class="metric">17x Engagement</span>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">Machine Learning</span>
-                        <span class="tech-tag">Tableau</span>
-                    </div>
-                </div>
+   <!-- Projects Section -->
+<section id="projects" class="projects">
+    <div class="section-header">
+        <h2>Featured Projects</h2>
+        <p>Data-driven solutions with measurable business impact</p>
+    </div>
+    <div class="project-list">
+        <div class="project-item animate-left">
+            <div class="project-image">
+                <img src="trendmate.jpg" alt="TrendMate AI Fashion Chatbot">
             </div>
-
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>SaaS Market Research & Sales Analysis</h3>
-                    <p class="date">Oct 2024</p>
-                </div>
-                <div class="project-body">
-                    <p>Analyzed 10K+ transactions using R to identify seasonal trends and profitability drivers across regions</p>
-                    <div class="metrics">
-                        <span class="metric">25% Q4 Revenue Spike</span>
-                        <span class="metric">10K+ Transactions</span>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">R</span>
-                        <span class="tech-tag">ANOVA</span>
-                        <span class="tech-tag">Regression Analysis</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="project-card">
-                <div class="project-header">
-                    <h3>Customer Behavior Analytics</h3>
-                    <p class="date">March 2025</p>
-                </div>
-                <div class="project-body">
-                    <p>Analyzed customer data to identify purchase patterns and segment customers for targeted marketing strategies</p>
-                    <div class="metrics">
-                        <span class="metric">Customer Segmentation</span>
-                        <span class="metric">Retention Strategy</span>
-                    </div>
-                    <div class="tech-stack">
-                        <span class="tech-tag">R</span>
-                        <span class="tech-tag">Statistical Modeling</span>
-                        <span class="tech-tag">Data Visualization</span>
-                    </div>
-                </div>
+            <div class="project-details">
+                <h3>🤖 TrendMate: AI Fashion E-Commerce Chatbot</h3>
+                <ul>
+                    <li><strong>What I Built:</strong> Led a team to create an AI chatbot using Gemini 2.0, FAISS, and SQLite.</li>
+                    <li><strong>The Results:</strong> Achieved 85–90% intent accuracy for near-instant customer service responses.</li>
+                    <li><strong>The Impact:</strong> Delivered a live technical demo to stakeholders, showing exactly how the AI architecture drives business value.</li>
+                </ul>
             </div>
         </div>
-    </section>
+
+        <div class="project-item animate-left" style="animation-delay: 0.2s;">
+            <div class="project-image">
+                <img src="remo-app.jpg" alt="ReMo App Data Analytics">
+            </div>
+            <div class="project-details">
+                <h3>📊 ReMo App: Data Analytics Consulting</h3>
+                <ul>
+                    <li><strong>What I Built:</strong> Built machine learning models with 89% accuracy to analyze 20,000+ data records.</li>
+                    <li><strong>The Results:</strong> Created Tableau dashboards proving that illustrated books get 17x higher engagement.</li>
+                    <li><strong>The Impact:</strong> Presented clear, data-driven strategy recommendations directly to company stakeholders.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="project-item animate-left" style="animation-delay: 0.4s;">
+            <div class="project-image">
+                <img src="saas-analysis.jpg" alt="SaaS Market Research">
+            </div>
+            <div class="project-details">
+                <h3>☁️ SaaS Market Research & Sales Analysis (AWS)</h3>
+                <ul>
+                    <li><strong>What I Built:</strong> Analyzed 10,000+ SaaS transactions using statistical regression and ANOVA testing to evaluate pricing discounts.</li>
+                    <li><strong>The Results:</strong> Successfully identified seasonal sales trends and key profitability drivers.</li>
+                    <li><strong>The Impact:</strong> Provided optimization insights that contributed to a 25% increase in Q4 revenue.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- Skills Section -->
 <section id="skills" class="skills">
